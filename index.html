@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김준희 & 김원영 결혼합니다</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- COVER -->
+  <section id="cover">
+    <div class="cover-overlay"></div>
+    <div class="cover-content">
+      <p class="cover-date">2026. 11. 28</p>
+      <h1 class="cover-names">
+        <span>김준희</span>
+        <span class="ampersand">&amp;</span>
+        <span>김원영</span>
+      </h1>
+      <p class="cover-sub">결혼합니다</p>
+      <div class="cover-divider"></div>
+      <p class="cover-venue">노블발렌티삼성 · 서울 강남구 봉은사로 637</p>
+    </div>
+    <div class="scroll-hint">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- GREETING -->
+  <section id="greeting">
+    <div class="section-inner">
+      <div class="petal-deco"></div>
+      <h2 class="section-title">초대합니다</h2>
+      <div class="title-line"></div>
+      <p class="greeting-text">
+        서로가 마주보며 다져온 사랑을<br />
+        이제 함께 한 곳을 바라보며<br />
+        걸어가고자 합니다.<br /><br />
+        저희 두 사람이 사랑으로 하나 되는 날,<br />
+        귀한 발걸음 하시어<br />
+        축복해 주시면 감사하겠습니다.
+      </p>
+      <div class="parents-info">
+        <div class="parents-row">
+          <span class="parents-side">신랑측</span>
+          <span class="parents-names">김상태 · 이영선의 아들 <strong>준희</strong></span>
+        </div>
+        <div class="parents-row">
+          <span class="parents-side">신부측</span>
+          <span class="parents-names">김재환 · 원주연의 딸 <strong>원영</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATE & CALENDAR -->
+  <section id="date">
+    <div class="section-inner">
+      <h2 class="section-title">예식 일시</h2>
+      <div class="title-line"></div>
+      <div class="date-detail">
+        <p class="date-main">2026년 11월 28일 토요일</p>
+        <p class="date-time">오후 2시 30분</p>
+        <p class="date-place">노블발렌티삼성</p>
+      </div>
+      <div class="calendar">
+        <div class="cal-header">
+          <span>2026</span>
+          <span class="cal-month">September</span>
+        </div>
+        <div class="cal-weekdays">
+          <span class="sun">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span class="sat">토</span>
+        </div>
+        <div class="cal-days" id="calDays"></div>
+      </div>
+      <div class="d-day-badge" id="dday"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-inner">
+      <h2 class="section-title">갤러리</h2>
+      <div class="title-line"></div>
+      <div class="gallery-grid">
+        <div class="gallery-item tall" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80')"></div>
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&q=80')"></div>
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&q=80')"></div>
+        <div class="gallery-item wide" style="background-image:url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80')"></div>
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1529636798458-92182e662485?w=400&q=80')"></div>
+        <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=400&q=80')"></div>
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lb-close" id="lbClose">&times;</button>
+      <button class="lb-prev" id="lbPrev">&#8249;</button>
+      <img class="lb-img" id="lbImg" src="" alt="gallery" />
+      <button class="lb-next" id="lbNext">&#8250;</button>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section id="map">
+    <div class="section-inner">
+      <h2 class="section-title">오시는 길</h2>
+      <div class="title-line"></div>
+      <div class="map-placeholder">
+        <div class="map-pin"></div>
+        <p class="map-address">서울 강남구 봉은사로 637<br />노블발렌티삼성</p>
+        <a class="map-btn" href="https://map.naver.com/v5/search/노블발렌티삼성" target="_blank" rel="noopener">네이버 지도</a>
+        <a class="map-btn" href="https://map.kakao.com/?q=노블발렌티삼성" target="_blank" rel="noopener">카카오 지도</a>
+      </div>
+      <div class="transport">
+        <div class="transport-item">
+          <span class="transport-icon">🚇</span>
+          <div>
+            <strong>지하철</strong>
+            <p>2호선 강남역 3번 출구 도보 5분</p>
+          </div>
+        </div>
+        <div class="transport-item">
+          <span class="transport-icon">🚌</span>
+          <div>
+            <strong>버스</strong>
+            <p>강남역 정류장 하차 (140, 341, 3412)</p>
+          </div>
+        </div>
+        <div class="transport-item">
+          <span class="transport-icon">🚗</span>
+          <div>
+            <strong>자가용</strong>
+            <p>건물 지하 2·3층 주차장 이용 가능<br />(3시간 무료)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCOUNT -->
+  <section id="account">
+    <div class="section-inner">
+      <h2 class="section-title">마음 전하기</h2>
+      <div class="title-line"></div>
+      <p class="account-desc">
+        축하의 마음을 전해 주시는 분들을 위해<br />계좌번호를 안내드립니다.
+      </p>
+      <div class="accordion-wrap">
+        <div class="accordion-item">
+          <button class="accordion-btn" data-target="acc1">
+            <span>신랑측 혼주 계좌</span>
+            <span class="acc-arrow">&#8964;</span>
+          </button>
+          <div class="accordion-body" id="acc1">
+            <div class="account-card">
+              <p class="acc-name">김태호 (신랑 아버지)</p>
+              <p class="acc-bank">국민은행</p>
+              <p class="acc-num">123-456-789012</p>
+              <button class="copy-btn" data-copy="123456789012">복사</button>
+            </div>
+            <div class="account-card">
+              <p class="acc-name">박미경 (신랑 어머니)</p>
+              <p class="acc-bank">신한은행</p>
+              <p class="acc-num">110-123-456789</p>
+              <button class="copy-btn" data-copy="110123456789">복사</button>
+            </div>
+            <div class="account-card">
+              <p class="acc-name">김지훈 (신랑)</p>
+              <p class="acc-bank">카카오뱅크</p>
+              <p class="acc-num">3333-01-2345678</p>
+              <button class="copy-btn" data-copy="3333012345678">복사</button>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" data-target="acc2">
+            <span>신부측 혼주 계좌</span>
+            <span class="acc-arrow">&#8964;</span>
+          </button>
+          <div class="accordion-body" id="acc2">
+            <div class="account-card">
+              <p class="acc-name">이성준 (신부 아버지)</p>
+              <p class="acc-bank">우리은행</p>
+              <p class="acc-num">1002-345-678901</p>
+              <button class="copy-btn" data-copy="1002345678901">복사</button>
+            </div>
+            <div class="account-card">
+              <p class="acc-name">최지영 (신부 어머니)</p>
+              <p class="acc-bank">하나은행</p>
+              <p class="acc-num">123-456789-01234</p>
+              <button class="copy-btn" data-copy="12345678901234">복사</button>
+            </div>
+            <div class="account-card">
+              <p class="acc-name">이서연 (신부)</p>
+              <p class="acc-bank">카카오뱅크</p>
+              <p class="acc-num">3333-02-3456789</p>
+              <button class="copy-btn" data-copy="3333023456789">복사</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-flower"></div>
+    <p class="footer-names">김준희 &amp; 김원영</p>
+    <p class="footer-date">2026. 11. 28</p>
+    <div class="contact-wrap">
+      <a class="contact-btn" href="tel:01012345678">신랑에게 연락</a>
+      <a class="contact-btn" href="tel:01098765432">신부에게 연락</a>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">계좌번호가 복사되었습니다</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
