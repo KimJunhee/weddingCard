@@ -428,6 +428,7 @@ button { font: inherit; color: inherit; background: none; border: none; }
 .wedding-root .end-rule { background: rgba(243,217,194,0.45); width: 1px; height: 34px; margin: 30px auto; }
 .wedding-root .end .fin-names { letter-spacing: .18em; color: #fff; font-family: "Nanum Myeongjo", serif; font-size: 23px; font-weight: 700; }
 .wedding-root .end .fin-date { letter-spacing: .26em; color: #e8c9b0; margin-top: 14px; font-family: Montserrat, sans-serif; font-size: 14.5px; }
+.wedding-root .end .fin-place { letter-spacing: .26em; color: #fff; margin-top: 14px; font-family: Montserrat, sans-serif; font-size: 14.5px; }
 
 .wedding-root .tel-btns { justify-content: center; gap: 12px; margin-top: 36px; display: flex; }
 .wedding-root .tel-btns a { letter-spacing: .05em; color: #6e1f2a; background: #fff; border-radius: 26px; padding: 13px 26px; font-size: 12.5px; transition: opacity .2s; }
