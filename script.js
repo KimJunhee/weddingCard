@@ -108,9 +108,27 @@ if (musicBtn && bgm) {
 /* ===== GALLERY MORE BUTTON ===== */
 const moreBtn = document.getElementById('moreBtn');
 if (moreBtn) {
+  // 처음에 숨겨져 있던(hidden 클래스가 있는) 요소들을 미리 선택해둡니다.
+  const extraCells = Array.from(document.querySelectorAll('#galGrid .cell.hidden'));
+  let isExpanded = false;
+
   moreBtn.addEventListener('click', () => {
-    document.querySelectorAll('#galGrid .cell.hidden').forEach(cell => cell.classList.remove('hidden'));
-    moreBtn.remove();
+    isExpanded = !isExpanded;
+
+    if (isExpanded) {
+      // 사진 펼치기
+      extraCells.forEach(cell => cell.classList.remove('hidden'));
+      moreBtn.textContent = '사진 접기';
+    } else {
+      // 사진 접기
+      extraCells.forEach(cell => cell.classList.add('hidden'));
+      moreBtn.textContent = '사진 더보기';
+
+      // 사진을 접었을 때 화면이 튕기는 느낌을 방지하기 위해 갤러리 상단으로 스크롤 이동
+      const gallerySection = document.querySelector('.gallery');
+      const offsetTop = gallerySection.getBoundingClientRect().top + window.scrollY - 30; // 30px 여백
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
   });
 }
 
