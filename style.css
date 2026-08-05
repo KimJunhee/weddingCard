@@ -406,18 +406,18 @@ button { font: inherit; color: inherit; background: none; border: none; }
 .wedding-root .acc-info .who { color: var(--ink); font-size: 14px; }
 .wedding-root .acc-info .who .role { color: var(--sub); margin-left: 6px; font-size: 11.5px; }
 .wedding-root .acc-info .num { color: var(--sub); margin-top: 3px; font-size: 12.5px; }
-.wedding-root .copy-btn {
-  border: 1px solid var(--line);
-  color: var(--accent);
-  cursor: pointer;
-  letter-spacing: .04em;
-  border-radius: 7px;
-  flex: none;
-  padding: 8px 15px;
-  font-family: Pretendard, sans-serif;
-  font-size: 12.5px;
-  transition: all .2s;
-}
+/*.wedding-root .copy-btn {*/
+/*  border: 1px solid var(--line);*/
+/*  color: var(--accent);*/
+/*  cursor: pointer;*/
+/*  letter-spacing: .04em;*/
+/*  border-radius: 7px;*/
+/*  flex: none;*/
+/*  padding: 8px 15px;*/
+/*  font-family: Pretendard, sans-serif;*/
+/*  font-size: 12.5px;*/
+/*  transition: all .2s;*/
+/*}*/
 .wedding-root .copy-btn:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
 
 /* ===== CLOSING / FOOTER ===== */
@@ -470,3 +470,125 @@ button { font: inherit; color: inherit; background: none; border: none; }
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
 .toast.show { bottom: 36px; }
+
+/* 계좌번호 복사 & 카카오페이 버튼 래퍼 */
+.btn-group {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+/* 카카오페이 송금 버튼 스타일 */
+.pay-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  font-size: 13px; /* 기존 버튼 사이즈에 맞게 조절하세요 */
+  color: #191919;
+  background-color: #FEE500; /* 카카오페이 노란색 */
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.pay-btn:active {
+  opacity: 0.8;
+}
+
+/* 계좌 항목 전체 래퍼 */
+.acc-item {
+  display: flex;
+  justify-content: space-between; /* 양쪽 끝으로 배치 */
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0; /* 항목 사이 옅은 선 */
+}
+
+/* 마지막 항목은 밑줄 제거 */
+.acc-item:last-child {
+  border-bottom: none;
+}
+
+/* 왼쪽 정보 영역 (위아래 정렬) */
+.acc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* 텍스트 위아래 간격 */
+  text-align: left;
+}
+
+/* 계좌번호 텍스트 */
+.acc-num {
+  font-size: 15px;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+/* '국민 | 1234...' 에서 | 기호 스타일 */
+.acc-num .divider {
+  color: #ddd;
+  margin: 0 4px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/* 예금주 이름 텍스트 */
+.acc-name {
+  font-size: 15px;
+  color: #555;
+}
+
+.acc-name .role {
+  font-size: 13px;
+  color: #999;
+  margin-left: 2px;
+}
+
+/* 오른쪽 버튼 그룹 (위아래 정렬) */
+.btn-group {
+  display: flex;
+  flex-direction: column; /* 세로로 배치 */
+  gap: 6px; /* 버튼 사이 간격 */
+  align-items: flex-end; /* 오른쪽 정렬 */
+}
+
+/* 복사 버튼 */
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ddd; /* 회색 테두리 */
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  width:62px;
+  height:35px;
+}
+
+/* 카카오페이 버튼 */
+.pay-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background-color: #FEE500;
+  border-radius: 4px;
+  text-decoration: none;
+  min-width: 58px; /* 복사버튼과 가로 너비 얼추 맞추기 */
+  box-sizing: border-box;
+}
+
+/* 카카오페이 아이콘 이미지 크기 조정 */
+.pay-btn img {
+  height: 12px; /* 원하시는 크기에 맞게 px 조정 가능 */
+  display: block;
+}
