@@ -584,6 +584,7 @@ button { font: inherit; color: inherit; background: none; border: none; }
   border-radius: 4px;
   text-decoration: none;
   min-width: 58px; /* 복사버튼과 가로 너비 얼추 맞추기 */
+  height:30px;
   box-sizing: border-box;
 }
 
